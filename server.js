@@ -3,7 +3,7 @@ const mongoose= require('mongoose');
 require('dotenv').config()
 
 const app =express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5000;  // Choose your Port address
 
 app.get('/', (req,res)=>{
     res.json({msg:"This is the End"})
@@ -17,7 +17,7 @@ app.use('/user',require('./routes/useRouter.js'))
 
 
 // mongodb
-const URI = process.env.MONGODB_URL;
+const URI = process.env.MONGODB_URL;  // make .env as enviroment variable
 console.log(process.env.MONGODB_URL);
 
 
